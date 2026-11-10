@@ -574,5 +574,21 @@ function desdeHash(){ const h = location.hash.slice(1); if (T[h]) { lang = h; } 
 window.addEventListener("hashchange", desdeHash);
 desdeHash();
 </script>
+<script data-goatcounter="https://bobe.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script>
+/* Cuenta como evento cada clic en WhatsApp o en llamar */
+document.addEventListener("click", function(e){
+  var a = e.target.closest && e.target.closest('a[href*="wa.me"], a[href^="tel:"]');
+  if (!a || !window.goatcounter || !window.goatcounter.count) return;
+  var tipo = a.href.indexOf("wa.me") > -1 ? "whatsapp" : "llamada";
+  var donde = a.closest("[id]") ? a.closest("[id]").id : (a.closest(".barra") ? "barra" : a.classList.contains("fab") ? "flotante" : "otro");
+  if (a.classList.contains("fab")) donde = "flotante";
+  if (a.closest(".barra")) donde = "barra-movil";
+  if (a.closest("header")) donde = "cabecera";
+  if (a.closest(".caja")) donde = "recuadro-articulo";
+  if (a.dataset.waServ) donde = "precio-" + a.dataset.waServ;
+  window.goatcounter.count({ path: tipo + "/" + donde + location.pathname.replace(/\/$/, "").replace(/^\//, "/").replace(/^$/, ""), title: tipo + " · " + donde + " · " + (document.title || ""), event: true });
+});
+</script>
 </body>
 </html>
