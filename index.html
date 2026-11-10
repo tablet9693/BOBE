@@ -182,6 +182,17 @@ details p{color:var(--muted);margin-top:10px;max-width:70ch}
 .dos{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,56px)}
 @media (max-width:860px){.dos{grid-template-columns:1fr}}
 
+
+/* Obras y guías */
+.galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px}
+.galeria figure{margin:0;border-radius:var(--r-lg);overflow:hidden;background:var(--soft);border:1px solid var(--line)}
+.galeria img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.galeria figcaption{padding:12px 16px;font-weight:600;font-size:.95rem}
+.guias{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:16px}
+.guia{display:grid;gap:10px;align-content:start;border:1px solid var(--line);border-radius:var(--r-lg);padding:22px;background:#fff;text-decoration:none;color:var(--ink);transition:box-shadow .15s ease,transform .15s ease}
+.guia:hover{box-shadow:var(--sombra);transform:translateY(-2px)}
+.guia .mas{color:var(--accent);font-weight:700;margin-top:auto}
+
 /* Pie, botón flotante y barra móvil */
 footer{background:var(--grafito);color:#F3F3F0;padding-block:44px 120px}
 footer .wrap{display:grid;gap:14px}
@@ -198,6 +209,7 @@ footer a{color:#9DBBF5}
 }
 </style>
 
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HomeAndConstructionBusiness", "name": "BOBE Construcciones", "url": "https://www.bobeconstrucciones.es/", "telephone": "+34616331574", "email": "info@bobeconstrucciones.es", "description": "Tabiques, falsos techos, trasdosados e insonorización en pladur. Precio orientativo con una foto por WhatsApp.", "areaServed": ["Vega Baja del Segura", "Orihuela", "Torrevieja", "Elche", "Alicante", "Murcia"], "address": {"@type": "PostalAddress", "addressRegion": "Alicante", "addressCountry": "ES"}, "knowsLanguage": ["es", "en", "de"], "priceRange": "€€"}</script>
 </head>
 <body>
 <header>
@@ -367,6 +379,21 @@ footer a{color:#9DBBF5}
     </div>
   </section>
 
+  <section id="obras" hidden>
+    <div class="wrap">
+      <div class="head"><p class="eti" data-t="o_eti">Obras</p><h2 data-t="o_h2">Trabajos terminados</h2></div>
+      <div class="galeria" id="galeria"></div>
+    </div>
+  </section>
+
+  <section id="guias">
+    <div class="wrap">
+      <div class="head"><p class="eti" data-t="g_eti">Blog</p><h2 data-t="g_h2">Guías y precios de pladur</h2><p data-t="g_p">Lo que cuesta, cuánto se tarda y qué tienes que saber antes de empezar.</p></div>
+      <div class="guias"><a class="guia" href="/blog/precio-pladur-m2-alicante/"><p class="eti">Guía</p><h3>¿Cuánto cuesta el pladur por m² en Alicante y Murcia? Precios 2026</h3><span class="mas">Leer →</span></a><a class="guia" href="/blog/tabique-pladur-dividir-habitacion/"><p class="eti">Guía</p><h3>Dividir una habitación con pladur: precio, plazos y todo lo que tienes que saber</h3><span class="mas">Leer →</span></a><a class="guia" href="/blog/falso-techo-pladur-focos/"><p class="eti">Guía</p><h3>Falso techo de pladur con focos: precio, ventajas y cómo se hace</h3><span class="mas">Leer →</span></a><a class="guia" href="/blog/insonorizar-pared-vecino-pladur/"><p class="eti">Guía</p><h3>Cómo insonorizar la pared del vecino con pladur (y cuánto cuesta)</h3><span class="mas">Leer →</span></a></div>
+      <p style="margin-top:20px"><a href="/blog/" style="font-weight:700" data-t="g_todas">Ver todas las guías →</a></p>
+    </div>
+  </section>
+
   <section class="band" id="dudas">
     <div class="wrap">
       <div class="head"><p class="eti" data-t="d_eti">Dudas frecuentes</p><h2 data-t="d_h2">Lo que nos suelen preguntar</h2></div>
@@ -379,7 +406,7 @@ footer a{color:#9DBBF5}
   <div class="wrap">
     <p style="font:900 1.4rem/1 var(--f-display)">BOBE <span style="font:600 .95rem var(--f-body)">Construcciones</span></p>
     <p class="dato" data-t="pie1">Tabiquería seca, falsos techos e insonorización · Vega Baja (Alicante)</p>
-    <p class="dato">+34 616 33 15 74 · info@bobeconstrucciones.es</p>
+    <p class="dato">+34 616 33 15 74 · info@bobeconstrucciones.es · <a href="/blog/">Blog</a></p>
     <p class="dato" data-t="pie2">Precios orientativos sin IVA. El precio final se confirma por escrito tras la visita.</p>
   </div>
 </footer>
@@ -398,7 +425,9 @@ const MINIMO = 350;                      // trabajo mínimo en € sin IVA
 const PRECIOS = {                        // € por m² sin IVA, "desde"
   tabique: 44, techo: 32, registrable: 28, trasdosado: 30, insonorizacion: 52
 };
-const PRECIO_HABITACION = 590;           // paquete «gana una habitación»
+const PRECIO_HABITACION = 590;
+const FOTOS = [                          // fotos de obras propias: {src:"fotos/obra1.jpg", es:"Techo con foseado en Orihuela", en:"...", de:"..."}
+];           // paquete «gana una habitación»
 /* ========================================================== */
 
 const PUEBLOS = ["Orihuela","Orihuela Costa","Torrevieja","Callosa de Segura","Almoradí","Cox","Redován","Albatera","Catral","Dolores","Rafal","Bigastro","Benejúzar","Jacarilla","Rojales","Guardamar del Segura","Pilar de la Horadada","San Miguel de Salinas","Los Montesinos","Algorfa","Benijófar","Formentera del Segura","Elche","Crevillent","Santa Pola","Alicante","Murcia","Beniel","Santomera","San Pedro del Pinatar","San Javier"];
@@ -412,6 +441,7 @@ f_eti:"Precio por WhatsApp",f_h2:"Cuéntanos tu obra",f_p:"Rellénalo en un minu
 e_nombre:"Escribe tu nombre.",e_tel:"Escribe un teléfono de al menos 9 cifras para poder llamarte.",e_pueblo:"Elige el pueblo de la obra.",e_serv:"Elige qué necesitas.",e_priv:"Marca la casilla para que podamos contactarte.",
 z_eti:"Dónde trabajamos",z_h2:"Pladur en la Vega Baja, Elche, Alicante y Murcia",z_p:"Estamos en la Vega Baja y nos movemos a diario por la comarca y la costa. Si tu pueblo no aparece, pregúntanos.",d_eti:"Dudas frecuentes",d_h2:"Lo que nos suelen preguntar",pie1:"Tabiquería seca, falsos techos e insonorización · Vega Baja (Alicante)",pie2:"Precios orientativos sin IVA. El precio final se confirma por escrito tras medir.",barra:"Presupuesto",
 hero_h1a:"¿Cuánto cuesta tu pladur?",hero_h1b:"Mándanos una foto.",hero_sub:"Respuesta en el día · Sin visita · Sin compromiso",mk_linea:"en línea",mk_hoy:"Hoy",mk_c1:"Hola, quiero cerrar parte del salón para hacer un dormitorio. Mide unos 3,5 × 2,6 m.",mk_b1:"¡Hola! Tabique con lana y hueco de puerta: unos 590 € + IVA. ¿Pasamos a medir el jueves y te lo cerramos por escrito?",mk_c2:"¡Perfecto! 👍",mk_nota:"Ejemplo de conversación",fab:"Precio por foto",llamar:"Llamar",ft1_h:"Foto de lejos",ft2_h:"Las medidas",ft3_h:"Los detalles",cta_eti:"¿Tienes el móvil a mano?",cta_h2:"Haz la foto ahora y hoy mismo sabes cuánto cuesta.",cta_p:"Sin visita, sin compromiso y sin más datos que tu WhatsApp.",pedir_wa:"Pedir precio",msg_q:"Hola, quiero precio para: ",msg_q2:". Os mando fotos y medidas.",
+o_eti:"Obras",o_h2:"Trabajos terminados",g_eti:"Blog",g_h2:"Guías y precios de pladur",g_p:"Lo que cuesta, cuánto se tarda y qué tienes que saber antes de empezar.",g_todas:"Ver todas las guías →",
 msg_hola:"Hola, quiero pedir presupuesto a BOBE. Os mando unas fotos.",msg_nombre:"Nombre",msg_tel:"Teléfono",msg_pueblo:"Pueblo",msg_serv:"Trabajo",msg_m2:"Metros aprox.",msg_cuando:"Para cuándo",msg_det:"Detalles",msg_calc:"Precio orientativo de la web"},
 en:{ft_eti:"Price without a visit",ft_h2:"Send us a photo and we will tell you the cost",ft_p:"We do not need to visit your home to give you a guide price. This is all we need:",ft1:"A photo from a distance of the whole wall or ceiling.",ft2:"Rough measurements: length and height of the wall, or length and width of the room.",ft3:"If there is a door, window, sockets or lights, a close-up photo or a line explaining it.",ft_btn:"Send photos on WhatsApp",ft_nota:"We reply the same day with a guide price. If it suits you, we come to measure and confirm it in writing.",svg_placa:"BOARD",svg_lana1:"MINERAL",svg_lana2:"WOOL",cta_top:"Get a quote",hero_eti:"Drywall · Price on WhatsApp",hero_h1:"Drywall partitions, ceilings and soundproofing. Built in days, with no rubble.",hero_lead:"Partitions, ceilings and soundproofing across the Vega Baja, Elche, Alicante and Murcia. Take a photo with your phone, send it on WhatsApp and get a guide price today, without a site visit.",hero_cta1:"See prices",hero_cta2:"Send us a photo on WhatsApp",t1:"Guide price from a photo, no visit needed",t2:"Same-day reply on WhatsApp",t3:"Dry build: no rubble, cleaned up daily",t4:"We speak English, Deutsch and Spanish",corte:"PARTITION 98/600 · 2 BOARDS 15 mm · MW 40 mm · ~42 dB",
 calc_eti:"Price calculator",calc_h2:"How much would it cost?",calc_p:"Choose the job and the approximate square metres. You get a guide price right away; the final price comes in writing after our visit.",c_serv:"Job",c_m2:"Approximate square metres",c_ayuda:"Wall: length × height. Ceiling: room length × width.",c_res:"Guide price",c_nota:"VAT not included. Materials, installation and clean-up included.",c_min:"Minimum job",c_btn:"Book a free visit with this estimate",
@@ -421,6 +451,7 @@ f_eti:"Price on WhatsApp",f_h2:"Tell us about your project",f_p:"It takes one mi
 e_nombre:"Please enter your name.",e_tel:"Please enter a phone number with at least 9 digits so we can call you.",e_pueblo:"Please choose the town of the job.",e_serv:"Please choose what you need.",e_priv:"Please tick the box so we can contact you.",
 z_eti:"Where we work",z_h2:"Drywall across the Vega Baja, Elche, Alicante and Murcia",z_p:"We are based in the Vega Baja and work every day across the area and the coast. If your town is not listed, just ask.",d_eti:"FAQ",d_h2:"What people usually ask us",pie1:"Drywall, false ceilings and soundproofing · Vega Baja (Alicante)",pie2:"Guide prices excluding VAT. The final price is confirmed in writing after measuring.",barra:"Get a quote",
 hero_h1a:"How much will your drywall cost?",hero_h1b:"Send us a photo.",hero_sub:"Same-day reply · No visit · No commitment",mk_linea:"online",mk_hoy:"Today",mk_c1:"Hi, I want to close off part of the living room to make a bedroom. It is about 3.5 × 2.6 m.",mk_b1:"Hi! Partition with insulation and a door opening: about €590 + VAT. Shall we come and measure on Thursday and confirm it in writing?",mk_c2:"Perfect! 👍",mk_nota:"Example conversation",fab:"Price from a photo",llamar:"Call",ft1_h:"A wide photo",ft2_h:"Measurements",ft3_h:"The details",cta_eti:"Got your phone handy?",cta_h2:"Take the photo now and know the price today.",cta_p:"No visit, no commitment, nothing but your WhatsApp.",pedir_wa:"Get a price",msg_q:"Hi, I would like a price for: ",msg_q2:". I will send photos and measurements.",
+o_eti:"Our work",o_h2:"Finished jobs",g_eti:"Blog (in Spanish)",g_h2:"Drywall guides and prices",g_p:"Costs, timings and what to know before you start.",g_todas:"See all guides →",
 msg_hola:"Hello, I would like a quote from BOBE. I am sending some photos.",msg_nombre:"Name",msg_tel:"Phone",msg_pueblo:"Town",msg_serv:"Job",msg_m2:"Approx. m²",msg_cuando:"When",msg_det:"Details",msg_calc:"Guide price from the website"},
 de:{ft_eti:"Preis ohne Besichtigung",ft_h2:"Schicken Sie uns ein Foto und wir nennen Ihnen den Preis",ft_p:"Für einen Richtpreis müssen wir nicht zu Ihnen kommen. Das genügt uns:",ft1:"Ein Foto der ganzen Wand oder Decke aus etwas Entfernung.",ft2:"Ungefähre Maße: Länge und Höhe der Wand oder Länge und Breite des Raums.",ft3:"Bei Tür, Fenster, Steckdosen oder Licht ein Nahfoto oder eine kurze Erklärung.",ft_btn:"Fotos per WhatsApp senden",ft_nota:"Wir antworten am selben Tag mit einem Richtpreis. Wenn er passt, kommen wir zum Aufmaß und bestätigen ihn schriftlich.",svg_placa:"PLATTE",svg_lana1:"MINERAL-",svg_lana2:"WOLLE",cta_top:"Angebot anfordern",hero_eti:"Trockenbau · Preis per WhatsApp",hero_h1:"Trennwände, Decken und Schallschutz im Trockenbau. In wenigen Tagen fertig, ohne Schutt.",hero_lead:"Trennwände, Decken und Schallschutz in der Vega Baja, Elche, Alicante und Murcia. Machen Sie ein Foto mit dem Handy, schicken Sie es per WhatsApp und Sie erhalten heute noch einen Richtpreis, ohne Besichtigung.",hero_cta1:"Preise ansehen",hero_cta2:"Foto per WhatsApp senden",t1:"Richtpreis per Foto, ohne Besichtigung",t2:"Antwort per WhatsApp am selben Tag",t3:"Trockenbau: kein Schutt, tägliche Reinigung",t4:"Wir sprechen Deutsch, Englisch und Spanisch",corte:"TRENNWAND 98/600 · 2 PLATTEN 15 mm · MW 40 mm · ~42 dB",
 calc_eti:"Preisrechner",calc_h2:"Was würde es kosten?",calc_p:"Wählen Sie die Arbeit und die ungefähren Quadratmeter. Sie erhalten sofort einen Richtpreis; den endgültigen Preis schriftlich nach unserem Besuch.",c_serv:"Arbeit",c_m2:"Ungefähre Quadratmeter",c_ayuda:"Wand: Länge × Höhe. Decke: Länge × Breite des Raums.",c_res:"Richtpreis",c_nota:"Zzgl. MwSt. Material, Montage und Reinigung inklusive.",c_min:"Mindestauftrag",c_btn:"Kostenlosen Besuch mit diesem Richtpreis anfragen",
@@ -430,6 +461,7 @@ f_eti:"Preis per WhatsApp",f_h2:"Erzählen Sie uns von Ihrem Projekt",f_p:"Dauer
 e_nombre:"Bitte geben Sie Ihren Namen ein.",e_tel:"Bitte geben Sie eine Telefonnummer mit mindestens 9 Ziffern ein.",e_pueblo:"Bitte wählen Sie den Ort der Arbeit.",e_serv:"Bitte wählen Sie, was Sie brauchen.",e_priv:"Bitte setzen Sie das Häkchen, damit wir Sie kontaktieren können.",
 z_eti:"Wo wir arbeiten",z_h2:"Trockenbau in der Vega Baja, Elche, Alicante und Murcia",z_p:"Wir sind in der Vega Baja ansässig und täglich in der Region und an der Küste unterwegs. Ist Ihr Ort nicht aufgeführt? Fragen Sie uns.",d_eti:"Häufige Fragen",d_h2:"Was uns oft gefragt wird",pie1:"Trockenbau, abgehängte Decken und Schallschutz · Vega Baja (Alicante)",pie2:"Richtpreise zzgl. MwSt. Der Endpreis wird nach dem Aufmaß schriftlich bestätigt.",barra:"Angebot",
 hero_h1a:"Was kostet Ihr Trockenbau?",hero_h1b:"Schicken Sie uns ein Foto.",hero_sub:"Antwort am selben Tag · Ohne Besichtigung · Unverbindlich",mk_linea:"online",mk_hoy:"Heute",mk_c1:"Hallo, ich möchte einen Teil des Wohnzimmers als Schlafzimmer abtrennen. Etwa 3,5 × 2,6 m.",mk_b1:"Hallo! Trennwand mit Dämmung und Türöffnung: ca. 590 € zzgl. MwSt. Sollen wir am Donnerstag zum Aufmaß kommen und es schriftlich bestätigen?",mk_c2:"Perfekt! 👍",mk_nota:"Beispielgespräch",fab:"Preis per Foto",llamar:"Anrufen",ft1_h:"Foto aus Entfernung",ft2_h:"Die Maße",ft3_h:"Die Details",cta_eti:"Handy zur Hand?",cta_h2:"Machen Sie jetzt das Foto und kennen Sie heute noch den Preis.",cta_p:"Ohne Besichtigung, unverbindlich, nur mit Ihrem WhatsApp.",pedir_wa:"Preis anfragen",msg_q:"Hallo, ich hätte gern einen Preis für: ",msg_q2:". Ich schicke Fotos und Maße.",
+o_eti:"Arbeiten",o_h2:"Fertige Projekte",g_eti:"Blog (auf Spanisch)",g_h2:"Ratgeber und Preise für Trockenbau",g_p:"Kosten, Dauer und was Sie vor dem Start wissen sollten.",g_todas:"Alle Ratgeber ansehen →",
 msg_hola:"Hallo, ich möchte ein Angebot von BOBE. Ich schicke Ihnen ein paar Fotos.",msg_nombre:"Name",msg_tel:"Telefon",msg_pueblo:"Ort",msg_serv:"Arbeit",msg_m2:"Ca. m²",msg_cuando:"Wann",msg_det:"Details",msg_calc:"Richtpreis von der Website"}
 };
 
@@ -488,6 +520,8 @@ function pintar(){
   $("#pueblos").innerHTML = PUEBLOS.map(p => `<li>${p}</li>`).join("");
   $("#faq").innerHTML = FAQ[lang].map(([q, a]) => `<details><summary>${q}</summary><p>${a}</p></details>`).join("");
   $("#tel-visible").textContent = TELEFONO_VISIBLE;
+  $("#obras").hidden = FOTOS.length === 0;
+  $("#galeria").innerHTML = FOTOS.map(f => `<figure><img src="${f.src}" alt="${f[lang] || f.es}" loading="lazy" width="800" height="600"><figcaption>${f[lang] || f.es}</figcaption></figure>`).join("");
   document.querySelectorAll("[data-wa]").forEach(a => a.href = waUrl(t("msg_hola")));
   document.querySelectorAll("[data-wa-serv]").forEach(a => a.href = waUrl(t("msg_q") + SERV[lang][a.dataset.waServ][0] + t("msg_q2")));
   document.querySelectorAll("[data-ta]").forEach(a => a.setAttribute("aria-label", t(a.dataset.ta)));
