@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:title" content="BOBE Construcciones · Pladur en Vega Baja, Alicante y Murcia">
+<meta property="og:description" content="Tabiques, falsos techos, trasdosados e insonorización en pladur. Precio orientativo con una foto por WhatsApp.">
+<link rel="canonical" href="https://bobeconstrucciones.es/">
+<title>BOBE Construcciones · Pladur</title>
+<meta name="description" content="Tabiques, falsos techos, trasdosados e insonorización en pladur en la Vega Baja, Elche, Alicante y Murcia. Mándanos una foto por WhatsApp y te damos un precio orientativo en el día.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;600&display=swap">
+<style>
+/* Layout: cabecera fija · hero con sección técnica del tabique · precio con foto · precios · método · formulario · zona · dudas. Marca BOBE (manual propio). */
+:root{
+  --surface:#F3F3F0; --raised:#FFFFFF; --placa:#DADCD8; --ink:#1C2023; --muted:#4F575E; --line:#C9CCC8;
+  --accent:#1F5BD8; --accent-ink:#FFFFFF; --grafito:#1C2023; --yeso:#F3F3F0; --perfil:#8B949B; --ok:#2E7D4F;
+  --lana:#E9C46A; --wa:#1E8E4E;
+  --f-display:Archivo,"Arial Black",Arial,sans-serif;
+  --f-body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --r-sm:2px; --r-md:6px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --surface:#15181B; --raised:#1F2327; --placa:#2A2F33; --ink:#EEEEEA; --muted:#A9B0B5; --line:#33393E;
+  --accent:#6E9BF2; --accent-ink:#0E1A33; --perfil:#8B949B; --ok:#5FBF86; --lana:#C9A54E; --wa:#3FB36F; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --surface:#15181B; --raised:#1F2327; --placa:#2A2F33; --ink:#EEEEEA; --muted:#A9B0B5; --line:#33393E;
+  --accent:#6E9BF2; --accent-ink:#0E1A33; --perfil:#8B949B; --ok:#5FBF86; --lana:#C9A54E; --wa:#3FB36F; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--surface);color:var(--ink);font:16px/1.65 var(--f-body);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--surface)}
+.wrap{max-width:1160px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.08;letter-spacing:-.015em}
+h1{font-size:clamp(2.1rem,5.4vw,3.9rem);font-weight:900;letter-spacing:-.025em}
+h2{font-size:clamp(1.6rem,3.4vw,2.3rem);font-weight:800}
+h3{font-size:1.2rem;font-weight:700}
+p{margin:0}
+.eti{font:500 .75rem/1.3 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.dato{font:500 .86rem/1.4 var(--f-mono);color:var(--muted)}
+.num{font-variant-numeric:tabular-nums}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;border-radius:var(--r-sm);
+  font:600 1rem/1 var(--f-body);text-decoration:none;cursor:pointer;border:2px solid transparent;transition:transform .08s ease,background .15s ease}
+.btn:active{transform:translateY(1px)}
+.btn-main{background:var(--accent);color:var(--accent-ink)}
+.btn-main:hover{filter:brightness(1.08)}
+.btn-line{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn-line:hover{background:var(--placa)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn svg{flex:none}
+
+/* Cabecera */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--surface);border-bottom:1px solid var(--line)}
+.top{display:flex;align-items:center;gap:16px;min-height:68px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.logo b{font:900 1.35rem/1 var(--f-display);letter-spacing:.02em}
+.logo span{font:600 .78rem/1 var(--f-body);color:var(--muted);display:block;margin-top:3px}
+.top .sp{flex:1}
+.langs{display:flex;border:1px solid var(--line);border-radius:var(--r-sm)}
+.langs button{font:500 .8rem/1 var(--f-mono);background:none;border:0;color:var(--muted);padding:10px 10px;cursor:pointer;min-height:40px}
+.langs button[aria-pressed="true"]{background:var(--ink);color:var(--surface)}
+.top .btn{min-height:42px;padding:0 16px;font-size:.95rem}
+@media (max-width:640px){.top .btn-cta{display:none}.logo span{display:none}}
+
+/* Hero */
+.hero{padding-block:clamp(40px,7vw,88px) clamp(36px,6vw,72px)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(28px,5vw,64px);align-items:center}
+.hero .lead{font-size:1.18rem;line-height:1.6;color:var(--muted);max-width:56ch;margin-top:20px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.trust{list-style:none;padding:0;margin:28px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 24px;max-width:560px}
+.trust li{display:flex;gap:10px;align-items:flex-start;font-weight:600;font-size:.97rem}
+.trust svg{flex:none;margin-top:3px;color:var(--ok)}
+.corte{background:var(--raised);border:1px solid var(--line);border-radius:var(--r-md);padding:22px}
+.corte svg{display:block;width:100%;height:auto}
+.corte .dato{margin-top:12px;display:block}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr}.corte{max-width:460px}}
+@media (max-width:420px){.trust{grid-template-columns:1fr}}
+
+/* Secciones */
+section{padding-block:clamp(48px,8vw,96px)}
+.band{background:var(--raised);border-block:1px solid var(--line)}
+.head{display:grid;gap:12px;margin-bottom:32px;max-width:66ch}
+.head p{color:var(--muted);font-size:1.06rem}
+
+/* Fotos */
+.fotos-lista{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.fotos-lista li{display:grid;grid-template-columns:36px minmax(0,1fr);gap:12px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:14px 16px;font-weight:600}
+.fotos-lista .dato{display:grid;place-items:center;width:28px;height:28px;border:1.5px solid var(--accent);color:var(--accent);border-radius:var(--r-sm)}
+label.f{display:grid;gap:6px;font-weight:600;font-size:.95rem}
+input,select,textarea{font:inherit;color:var(--ink);background:var(--raised);border:1px solid var(--line);border-radius:var(--r-sm);padding:12px 14px;min-height:48px;width:100%}
+textarea{min-height:96px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:0;border-color:var(--accent)}
+
+/* Precios */
+.precios{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:16px}
+.serv{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:22px;display:grid;gap:10px;align-content:start}
+.serv .desde{font-family:var(--f-display);font-weight:800;font-size:1.7rem;letter-spacing:-.01em}
+.serv .desde small{font:500 .8rem var(--f-mono);color:var(--muted);letter-spacing:0}
+.serv p{color:var(--muted);font-size:.97rem}
+.pack{margin-top:16px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:center;border:2px solid var(--accent);border-radius:var(--r-md);padding:24px;background:var(--surface)}
+.pack .desde{font:900 2rem/1 var(--f-display)}
+@media (max-width:640px){.pack{grid-template-columns:1fr}}
+.aviso-precio{margin-top:16px;color:var(--muted);font-size:.9rem}
+
+/* Método */
+.pasos{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:0;border-top:2px solid var(--ink)}
+.pasos li{padding:20px 20px 4px 0;display:grid;gap:8px}
+.pasos .dato{color:var(--accent)}
+.pasos p{color:var(--muted)}
+
+/* Formulario */
+.form-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(24px,5vw,56px);align-items:start}
+@media (max-width:860px){.form-grid{grid-template-columns:1fr}}
+form{background:var(--raised);border:1px solid var(--line);border-radius:var(--r-md);padding:24px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+form .full{grid-column:1/-1}
+@media (max-width:560px){form{grid-template-columns:1fr}}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:.92rem;color:var(--muted)}
+.check input{width:20px;height:20px;min-height:0;margin-top:3px;flex:none;accent-color:var(--accent)}
+.err{color:#B3261E;font-weight:600;font-size:.93rem}
+:root[data-theme="dark"] .err{color:#F2867E}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .err{color:#F2867E}}
+.listo{grid-column:1/-1;display:grid;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:18px}
+.listo pre{white-space:pre-wrap;margin:0;font:500 .85rem/1.5 var(--f-mono);color:var(--ink);max-height:180px;overflow:auto}
+.listo .acc{display:flex;flex-wrap:wrap;gap:10px}
+.contacto-directo{display:grid;gap:14px;margin-top:22px}
+.contacto-directo .tel{font:800 1.5rem/1 var(--f-display)}
+
+/* Zona y dudas */
+.pueblos{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0}
+.pueblos li{border:1px solid var(--line);border-radius:var(--r-sm);padding:6px 12px;font-size:.93rem;background:var(--surface)}
+details{border-bottom:1px solid var(--line);padding-block:16px}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{font:700 1.08rem/1.4 var(--f-display);cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:500 1.3rem/1 var(--f-mono);color:var(--accent)}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted);margin-top:10px;max-width:70ch}
+.dos{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,56px)}
+@media (max-width:860px){.dos{grid-template-columns:1fr}}
+
+/* Pie y barra móvil */
+footer{background:var(--grafito);color:var(--yeso);padding-block:40px 110px}
+footer .wrap{display:grid;gap:14px}
+footer .dato{color:#B9C0C5}
+footer a{color:#9DBBF5}
+.barra{display:none}
+@media (max-width:760px){
+  .barra{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--surface);border-top:1px solid var(--line);
+    padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+  .barra .btn{min-height:48px;padding:0 10px;font-size:.95rem}
+}
+</style>
+
+</head>
+<body>
+<header>
+  <div class="wrap top">
+    <a class="logo" href="#" data-ir="inicio" aria-label="BOBE Construcciones, inicio">
+      <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true">
+        <rect width="40" height="40" rx="8" fill="var(--grafito)"/>
+        <rect x="9" y="7" width="4" height="22" fill="#F3F3F0"/>
+        <rect x="14" y="7" width="13" height="10" fill="#F3F3F0"/>
+        <rect x="14" y="19" width="17" height="10" fill="#F3F3F0"/>
+        <rect x="7" y="32" width="26" height="2" fill="#1F5BD8"/>
+      </svg>
+      <div><b>BOBE</b><span>Construcciones · pladur</span></div>
+    </a>
+    <div class="sp"></div>
+    <div class="langs" role="group" aria-label="Idioma">
+      <button type="button" data-lang="es" aria-pressed="true">ES</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      <button type="button" data-lang="de" aria-pressed="false">DE</button>
+    </div>
+    <button type="button" class="btn btn-main btn-cta" data-ir="presupuesto" data-t="cta_top">Pedir presupuesto</button>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero" id="inicio">
+    <div class="hero-grid">
+      <div>
+        <p class="eti" data-t="hero_eti">Pladur · Vega Baja, Elche, Alicante y Murcia</p>
+        <h1 style="margin-top:14px" data-t="hero_h1">Tabiques, techos e insonorización en pladur. Montado en días, sin escombro.</h1>
+        <p class="lead" data-t="hero_lead">Ganamos una habitación en tu salón, bajamos un techo con luz o aislamos esa pared que deja pasar todo. Te visitamos gratis y te damos el precio por escrito en 24 horas.</p>
+        <div class="ctas">
+          
+          <a class="btn btn-wa" data-wa href="https://wa.me/34616331574" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3Z"/></svg>
+            <span data-t="hero_cta2">Mándanos una foto por WhatsApp</span></a>
+          <button type="button" class="btn btn-line" data-ir="precios" data-t="hero_cta1">Ver precios</button>
+        </div>
+        <ul class="trust">
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span data-t="t1">Visita y medición gratis</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span data-t="t2">Presupuesto por escrito en 24 h</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span data-t="t3">Obra seca: sin escombro, recogida diaria</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span data-t="t4">Te atendemos en español, English y Deutsch</span></li>
+        </ul>
+      </div>
+      <figure class="corte" style="margin:0" aria-labelledby="corte-txt">
+        <svg viewBox="0 0 360 250" role="img" aria-label="Sección de un tabique de pladur: dos placas de yeso, perfiles metálicos y lana mineral en el interior">
+          <rect x="0" y="0" width="360" height="250" fill="var(--raised)"/>
+          <!-- suelo y techo -->
+          <rect x="20" y="16" width="320" height="8" fill="var(--perfil)"/>
+          <rect x="20" y="214" width="320" height="8" fill="var(--perfil)"/>
+          <!-- placas -->
+          <rect x="120" y="24" width="15" height="190" fill="var(--placa)" stroke="var(--ink)" stroke-width="1.2"/>
+          <rect x="225" y="24" width="15" height="190" fill="var(--placa)" stroke="var(--ink)" stroke-width="1.2"/>
+          <!-- lana mineral -->
+          <g fill="var(--lana)" opacity=".85">
+            <rect x="140" y="30" width="80" height="178"/>
+          </g>
+          <g stroke="var(--ink)" stroke-width="1" fill="none" opacity=".45">
+            <path d="M144 50 q18 -10 36 0 t36 0"/><path d="M144 80 q18 -10 36 0 t36 0"/><path d="M144 110 q18 -10 36 0 t36 0"/>
+            <path d="M144 140 q18 -10 36 0 t36 0"/><path d="M144 170 q18 -10 36 0 t36 0"/><path d="M144 200 q18 -10 36 0 t36 0"/>
+          </g>
+          <!-- montante -->
+          <rect x="135" y="24" width="5" height="190" fill="var(--perfil)"/>
+          <rect x="220" y="24" width="5" height="190" fill="var(--perfil)"/>
+          <!-- tiralíneas -->
+          <rect x="20" y="236" width="320" height="3" fill="var(--accent)"/>
+          <!-- cotas -->
+          <g font-family="IBM Plex Mono,monospace" font-size="10" fill="var(--muted)">
+            <text x="20" y="120" data-t="svg_placa">PLACA</text><text x="20" y="134">15 mm</text>
+            <text x="258" y="104" data-t="svg_lana1">LANA</text><text x="258" y="118" data-t="svg_lana2">MINERAL</text><text x="258" y="132">40 mm</text>
+            <line x1="120" y1="246" x2="240" y2="246" stroke="var(--muted)" stroke-width="1"/>
+          </g>
+          <g stroke="var(--muted)" stroke-width="1"><line x1="78" y1="122" x2="118" y2="122"/><line x1="226" y1="112" x2="254" y2="112"/></g>
+        </svg>
+        <figcaption class="dato" id="corte-txt" data-t="corte">TABIQUE 98/600 · 2 PLACAS 15 mm · LM 40 mm · ~42 dB</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <section class="band" id="fotos">
+    <div class="wrap dos">
+      <div class="head" style="margin:0">
+        <p class="eti" data-t="ft_eti">Precio sin visita</p>
+        <h2 data-t="ft_h2">Mándanos una foto y te decimos cuánto cuesta</h2>
+        <p data-t="ft_p">Para darte un precio orientativo no hace falta que vayamos a tu casa. Con esto nos basta:</p>
+      </div>
+      <div style="display:grid;gap:18px;align-content:start">
+        <ul class="fotos-lista">
+          <li><span class="dato">1</span><span data-t="ft1">Una foto de lejos de la pared o del techo entero.</span></li>
+          <li><span class="dato">2</span><span data-t="ft2">Las medidas aproximadas: largo y alto de la pared, o largo y ancho de la habitación.</span></li>
+          <li><span class="dato">3</span><span data-t="ft3">Si hay puerta, ventana, enchufes o luces, una foto de cerca o una línea explicándolo.</span></li>
+        </ul>
+        <a class="btn btn-wa" data-wa href="https://wa.me/34616331574" target="_blank" rel="noopener" style="justify-self:start"><span data-t="ft_btn">Mandar fotos por WhatsApp</span></a>
+        <p class="dato" data-t="ft_nota">Te contestamos en el día con un precio orientativo. Si te encaja, vamos a medir y te lo cerramos por escrito.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="precios">
+    <div class="wrap">
+      <div class="head">
+        <p class="eti" data-t="p_eti">Precios</p>
+        <h2 data-t="p_h2">Lo que hacemos y desde cuánto</h2>
+        <p data-t="p_p">Material de primeras marcas, montaje y limpieza incluidos. Sin sorpresas en la factura.</p>
+      </div>
+      <div class="precios" id="lista-precios"></div>
+      <div class="pack">
+        <div style="display:grid;gap:8px">
+          <p class="eti" style="color:var(--accent)" data-t="pk_eti">Lo más pedido</p>
+          <h3 data-t="pk_h3">Gana una habitación en tu salón</h3>
+          <p style="color:var(--muted)" data-t="pk_p">Tabique de hasta 10 m² con hueco para puerta, lana mineral y juntas listas para pintar. Montado en 2 días.</p>
+        </div>
+        <div style="display:grid;gap:10px;justify-items:start">
+          <p class="desde num"><span data-t="desde">desde</span> <span id="pk-precio">590 €</span></p>
+          <button type="button" class="btn btn-main" data-ir="presupuesto" data-servicio="habitacion" data-t="pk_btn">Lo quiero</button>
+        </div>
+      </div>
+      <p class="aviso-precio" id="aviso-precio" data-t="p_aviso">Precios orientativos sin IVA para obra en la zona. Trabajo mínimo: 350 €. El precio final depende de la altura, los huecos y el acabado, y te lo damos por escrito antes de empezar.</p>
+    </div>
+  </section>
+
+  <section class="band" id="metodo">
+    <div class="wrap">
+      <div class="head">
+        <p class="eti" data-t="m_eti">Cómo trabajamos</p>
+        <h2 data-t="m_h2">De tu mensaje a la obra terminada</h2>
+      </div>
+      <ol class="pasos">
+        <li><span class="dato">01 · <span data-t="m1_t">Hoy</span></span><h3 data-t="m1_h">Nos cuentas qué quieres</h3><p data-t="m1_p">Por WhatsApp o con el formulario. Si mandas una foto, mejor.</p></li>
+        <li><span class="dato">02 · <span data-t="m2_t">En 48 h</span></span><h3 data-t="m2_h">Visita y medición gratis</h3><p data-t="m2_p">Medimos, vemos huecos, enchufes y luz, y te aconsejamos el sistema.</p></li>
+        <li><span class="dato">03 · <span data-t="m3_t">En 24 h</span></span><h3 data-t="m3_h">Presupuesto por escrito</h3><p data-t="m3_p">Por partidas, con plazo y fecha de inicio. Sin compromiso.</p></li>
+        <li><span class="dato">04 · <span data-t="m4_t">2–5 días</span></span><h3 data-t="m4_h">Montaje y entrega limpia</h3><p data-t="m4_p">Obra seca, recogemos cada día y te enviamos fotos del avance.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="presupuesto">
+    <div class="wrap form-grid">
+      <div class="head" style="margin:0">
+        <p class="eti" data-t="f_eti">Presupuesto gratis</p>
+        <h2 data-t="f_h2">Cuéntanos tu obra</h2>
+        <p data-t="f_p">Rellénalo en un minuto y te contestamos hoy mismo por WhatsApp para fijar la visita.</p>
+        <div class="contacto-directo">
+          <p class="dato" data-t="f_tel">O llama o escribe directamente:</p>
+          <p class="tel num" id="tel-visible">+34 616 33 15 74</p>
+          <p class="dato">info@bobeconstrucciones.es</p>
+        </div>
+      </div>
+      <form id="form" novalidate>
+        <label class="f" for="f-nombre"><span data-t="f_nombre">Nombre</span><input id="f-nombre" name="nombre" autocomplete="name" required></label>
+        <label class="f" for="f-tel"><span data-t="f_telefono">Teléfono</span><input id="f-tel" name="telefono" type="tel" autocomplete="tel" inputmode="tel" required></label>
+        <label class="f" for="f-pueblo"><span data-t="f_pueblo">Pueblo de la obra</span><select id="f-pueblo" name="pueblo" required></select></label>
+        <label class="f" for="f-serv"><span data-t="f_serv">Qué necesitas</span><select id="f-serv" name="servicio" required></select></label>
+        <label class="f" for="f-m2"><span data-t="f_m2">Metros aproximados (si los sabes)</span><input id="f-m2" name="m2" inputmode="numeric" class="num"></label>
+        <label class="f" for="f-cuando"><span data-t="f_cuando">¿Para cuándo?</span><select id="f-cuando" name="cuando"></select></label>
+        <label class="f full" for="f-msg"><span data-t="f_msg">Cuéntanos un poco más</span><textarea id="f-msg" name="mensaje" data-tp="f_msg_ph" placeholder="Ej.: quiero dividir el salón en dos para hacer un dormitorio, el techo tiene 2,60 m."></textarea></label>
+        <label class="check full" for="f-priv"><input type="checkbox" id="f-priv" name="privacidad"><span data-t="f_priv">Acepto que BOBE Construcciones use estos datos solo para contactarme sobre este presupuesto.</span></label>
+        <p class="err full" id="f-err" hidden></p>
+        <button type="submit" class="btn btn-main full" data-t="f_btn">Pedir visita gratis</button>
+        <div class="listo" id="listo" hidden>
+          <p style="font-weight:600" data-t="f_ok">Tu mensaje está listo. Pulsa el botón para enviarlo por WhatsApp:</p>
+          <pre id="listo-txt"></pre>
+          <div class="acc">
+            <a class="btn btn-wa" id="listo-wa" href="https://wa.me/34616331574" target="_blank" rel="noopener" data-t="f_wa">Enviar por WhatsApp</a>
+            <button type="button" class="btn btn-line" id="listo-copiar" data-t="f_copiar">Copiar el mensaje</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="band" id="zona">
+    <div class="wrap dos">
+      <div class="head" style="margin:0">
+        <p class="eti" data-t="z_eti">Dónde trabajamos</p>
+        <h2 data-t="z_h2">Pladur en la Vega Baja, Elche, Alicante y Murcia</h2>
+        <p data-t="z_p">Estamos en la Vega Baja y nos movemos a diario por la comarca y la costa. Si tu pueblo no aparece, pregúntanos.</p>
+      </div>
+      <ul class="pueblos" id="pueblos"></ul>
+    </div>
+  </section>
+
+  <section id="dudas">
+    <div class="wrap">
+      <div class="head"><p class="eti" data-t="d_eti">Dudas frecuentes</p><h2 data-t="d_h2">Lo que nos suelen preguntar</h2></div>
+      <div id="faq"></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p style="font:900 1.4rem/1 var(--f-display)">BOBE <span style="font:600 .95rem var(--f-body)">Construcciones</span></p>
+    <p class="dato" data-t="pie1">Tabiquería seca, falsos techos e insonorización · Vega Baja (Alicante)</p>
+    <p class="dato">+34 616 33 15 74 · info@bobeconstrucciones.es</p>
+    <p class="dato" data-t="pie2">Precios orientativos sin IVA. El precio final se confirma por escrito tras la visita.</p>
+  </div>
+</footer>
+
+<div class="barra">
+  <a class="btn btn-wa" data-wa href="https://wa.me/34616331574" target="_blank" rel="noopener">WhatsApp</a>
+  <button type="button" class="btn btn-main" data-ir="presupuesto" data-t="barra">Presupuesto</button>
+</div>
+
+<script>
+/* ===== AJUSTES: cambia aquí tu teléfono y tus precios ===== */
+const WHATSAPP = "34616331574";          // tu número con prefijo 34, sin espacios ni +
+const TELEFONO_VISIBLE = "+34 616 33 15 74";
+const MINIMO = 350;                      // trabajo mínimo en € sin IVA
+const PRECIOS = {                        // € por m² sin IVA, "desde"
+  tabique: 44, techo: 32, registrable: 28, trasdosado: 30, insonorizacion: 52
+};
+const PRECIO_HABITACION = 590;           // paquete «gana una habitación»
+/* ========================================================== */
+
+const PUEBLOS = ["Orihuela","Orihuela Costa","Torrevieja","Callosa de Segura","Almoradí","Cox","Redován","Albatera","Catral","Dolores","Rafal","Bigastro","Benejúzar","Jacarilla","Rojales","Guardamar del Segura","Pilar de la Horadada","San Miguel de Salinas","Los Montesinos","Algorfa","Benijófar","Formentera del Segura","Elche","Crevillent","Santa Pola","Alicante","Murcia","Beniel","Santomera","San Pedro del Pinatar","San Javier"];
+
+const T = {
+es:{ft_eti:"Precio sin visita",ft_h2:"Mándanos una foto y te decimos cuánto cuesta",ft_p:"Para darte un precio orientativo no hace falta que vayamos a tu casa. Con esto nos basta:",ft1:"Una foto de lejos de la pared o del techo entero.",ft2:"Las medidas aproximadas: largo y alto de la pared, o largo y ancho de la habitación.",ft3:"Si hay puerta, ventana, enchufes o luces, una foto de cerca o una línea explicándolo.",ft_btn:"Mandar fotos por WhatsApp",ft_nota:"Te contestamos en el día con un precio orientativo. Si te encaja, vamos a medir y te lo cerramos por escrito.",svg_placa:"PLACA",svg_lana1:"LANA",svg_lana2:"MINERAL",cta_top:"Pedir presupuesto",hero_eti:"Pladur · Vega Baja, Elche, Alicante y Murcia",hero_h1:"Tabiques, techos e insonorización en pladur. Montado en días, sin escombro.",hero_lead:"Ganamos una habitación en tu salón, bajamos un techo con luz o aislamos esa pared que deja pasar todo. Mándanos una foto por WhatsApp y te damos un precio orientativo en el día, sin que tengamos que ir a verlo.",hero_cta1:"Ver precios",hero_cta2:"Mándanos una foto por WhatsApp",t1:"Precio orientativo con una foto, sin visita",t2:"Respuesta por WhatsApp en el día",t3:"Obra seca: sin escombro, recogida diaria",t4:"Te atendemos en español, English y Deutsch",corte:"TABIQUE 98/600 · 2 PLACAS 15 mm · LM 40 mm · ~42 dB",
+calc_eti:"Calculadora",calc_h2:"¿Cuánto me costaría?",calc_p:"Elige el trabajo y los metros aproximados. Te damos un precio orientativo al momento; el definitivo, por escrito tras la visita.",c_serv:"Trabajo",c_m2:"Metros cuadrados aproximados",c_ayuda:"Tabique: largo × alto. Techo: largo × ancho de la habitación.",c_res:"Precio orientativo",c_nota:"IVA no incluido. Incluye material, montaje y recogida.",c_min:"Trabajo mínimo",c_btn:"Pedir visita gratis con este cálculo",
+p_eti:"Precios",p_h2:"Lo que hacemos y desde cuánto",p_p:"Material de primeras marcas, montaje y limpieza incluidos. Sin sorpresas en la factura.",desde:"desde",m2u:"€/m² + IVA",pk_eti:"Lo más pedido",pk_h3:"Gana una habitación en tu salón",pk_p:"Tabique de hasta 10 m² con hueco para puerta, lana mineral y juntas listas para pintar. Montado en 2 días.",pk_btn:"Lo quiero",p_aviso:"Precios orientativos sin IVA para obra en la zona. Trabajo mínimo: 350 €. Con tus fotos te afinamos el precio, y el definitivo te lo damos por escrito tras medir.",pedir:"Pedir precio",
+m_eti:"Cómo trabajamos",m_h2:"De tu mensaje a la obra terminada",m1_t:"Hoy",m1_h:"Nos mandas fotos",m1_p:"Por WhatsApp: 2 o 3 fotos y las medidas aproximadas.",m2_t:"En el día",m2_h:"Precio orientativo",m2_p:"Te decimos cuánto costaría y qué sistema recomendamos, sin visita.",m3_t:"Si te encaja",m3_h:"Medición y precio cerrado",m3_p:"Vamos, medimos y te damos el precio final por escrito, con fecha de inicio.",m4_t:"2–5 días",m4_h:"Montaje y entrega limpia",m4_p:"Obra seca, recogemos cada día y te enviamos fotos del avance.",
+f_eti:"Precio por WhatsApp",f_h2:"Cuéntanos tu obra",f_p:"Rellénalo en un minuto. Al enviarlo se abre WhatsApp con tu mensaje: añade 2 o 3 fotos y te contestamos con un precio orientativo.",f_tel:"O llama o escribe directamente:",f_nombre:"Nombre",f_telefono:"Teléfono",f_pueblo:"Pueblo de la obra",f_serv:"Qué necesitas",f_m2:"Metros aproximados (si los sabes)",f_cuando:"¿Para cuándo?",f_msg:"Cuéntanos un poco más",f_msg_ph:"Ej.: quiero dividir el salón en dos para hacer un dormitorio, el techo tiene 2,60 m.",f_priv:"Acepto que BOBE Construcciones use estos datos solo para contactarme sobre este presupuesto.",f_btn:"Enviar y mandar fotos",f_ok:"Tu mensaje está listo. Pulsa el botón y, en el chat de WhatsApp, añade 2 o 3 fotos de la pared o del techo:",f_wa:"Enviar por WhatsApp",f_copiar:"Copiar el mensaje",f_copiado:"Copiado",elige:"Elige una opción",otro:"Otro pueblo",
+e_nombre:"Escribe tu nombre.",e_tel:"Escribe un teléfono de al menos 9 cifras para poder llamarte.",e_pueblo:"Elige el pueblo de la obra.",e_serv:"Elige qué necesitas.",e_priv:"Marca la casilla para que podamos contactarte.",
+z_eti:"Dónde trabajamos",z_h2:"Pladur en la Vega Baja, Elche, Alicante y Murcia",z_p:"Estamos en la Vega Baja y nos movemos a diario por la comarca y la costa. Si tu pueblo no aparece, pregúntanos.",d_eti:"Dudas frecuentes",d_h2:"Lo que nos suelen preguntar",pie1:"Tabiquería seca, falsos techos e insonorización · Vega Baja (Alicante)",pie2:"Precios orientativos sin IVA. El precio final se confirma por escrito tras medir.",barra:"Presupuesto",
+msg_hola:"Hola, quiero pedir presupuesto a BOBE. Os mando unas fotos.",msg_nombre:"Nombre",msg_tel:"Teléfono",msg_pueblo:"Pueblo",msg_serv:"Trabajo",msg_m2:"Metros aprox.",msg_cuando:"Para cuándo",msg_det:"Detalles",msg_calc:"Precio orientativo de la web"},
+en:{ft_eti:"Price without a visit",ft_h2:"Send us a photo and we will tell you the cost",ft_p:"We do not need to visit your home to give you a guide price. This is all we need:",ft1:"A photo from a distance of the whole wall or ceiling.",ft2:"Rough measurements: length and height of the wall, or length and width of the room.",ft3:"If there is a door, window, sockets or lights, a close-up photo or a line explaining it.",ft_btn:"Send photos on WhatsApp",ft_nota:"We reply the same day with a guide price. If it suits you, we come to measure and confirm it in writing.",svg_placa:"BOARD",svg_lana1:"MINERAL",svg_lana2:"WOOL",cta_top:"Get a quote",hero_eti:"Drywall · Vega Baja, Elche, Alicante and Murcia",hero_h1:"Drywall partitions, ceilings and soundproofing. Built in days, with no rubble.",hero_lead:"We add a room to your living area, drop a ceiling with built-in lighting or soundproof the wall that lets every noise through. Send us a photo on WhatsApp and get a guide price the same day, without a site visit.",hero_cta1:"See prices",hero_cta2:"Send us a photo on WhatsApp",t1:"Guide price from a photo, no visit needed",t2:"Same-day reply on WhatsApp",t3:"Dry build: no rubble, cleaned up daily",t4:"We speak English, Deutsch and Spanish",corte:"PARTITION 98/600 · 2 BOARDS 15 mm · MW 40 mm · ~42 dB",
+calc_eti:"Price calculator",calc_h2:"How much would it cost?",calc_p:"Choose the job and the approximate square metres. You get a guide price right away; the final price comes in writing after our visit.",c_serv:"Job",c_m2:"Approximate square metres",c_ayuda:"Wall: length × height. Ceiling: room length × width.",c_res:"Guide price",c_nota:"VAT not included. Materials, installation and clean-up included.",c_min:"Minimum job",c_btn:"Book a free visit with this estimate",
+p_eti:"Prices",p_h2:"What we do and from how much",p_p:"Quality brand materials, installation and clean-up included. No surprises on the invoice.",desde:"from",m2u:"€/m² + VAT",pk_eti:"Most requested",pk_h3:"Add a room to your living area",pk_p:"Partition up to 10 m² with a door opening, mineral wool and joints ready to paint. Built in 2 days.",pk_btn:"I want this",p_aviso:"Guide prices excluding VAT for jobs in our area. Minimum job: €350. Your photos let us refine the price; the final one comes in writing after measuring.",pedir:"Ask for a price",
+m_eti:"How we work",m_h2:"From your message to the finished job",m1_t:"Today",m1_h:"You send us photos",m1_p:"On WhatsApp: 2 or 3 photos and rough measurements.",m2_t:"Same day",m2_h:"Guide price",m2_p:"We tell you what it would cost and which system we recommend, without a visit.",m3_t:"If it suits you",m3_h:"Measuring and fixed price",m3_p:"We come, measure and give you the final price in writing, with a start date.",m4_t:"2–5 days",m4_h:"Clean installation and hand-over",m4_p:"Dry build, daily clean-up and progress photos on WhatsApp.",
+f_eti:"Price on WhatsApp",f_h2:"Tell us about your project",f_p:"It takes one minute. When you send it, WhatsApp opens with your message: add 2 or 3 photos and we reply with a guide price.",f_tel:"Or call or message us directly:",f_nombre:"Name",f_telefono:"Phone",f_pueblo:"Town of the job",f_serv:"What do you need?",f_m2:"Approx. square metres (if you know)",f_cuando:"When?",f_msg:"Tell us a bit more",f_msg_ph:"E.g. I want to split the living room to make a bedroom; the ceiling is 2.60 m high.",f_priv:"I agree that BOBE Construcciones uses this data only to contact me about this quote.",f_btn:"Send and add photos",f_ok:"Your message is ready. Tap the button and, in the WhatsApp chat, add 2 or 3 photos of the wall or ceiling:",f_wa:"Send on WhatsApp",f_copiar:"Copy the message",f_copiado:"Copied",elige:"Choose an option",otro:"Other town",
+e_nombre:"Please enter your name.",e_tel:"Please enter a phone number with at least 9 digits so we can call you.",e_pueblo:"Please choose the town of the job.",e_serv:"Please choose what you need.",e_priv:"Please tick the box so we can contact you.",
+z_eti:"Where we work",z_h2:"Drywall across the Vega Baja, Elche, Alicante and Murcia",z_p:"We are based in the Vega Baja and work every day across the area and the coast. If your town is not listed, just ask.",d_eti:"FAQ",d_h2:"What people usually ask us",pie1:"Drywall, false ceilings and soundproofing · Vega Baja (Alicante)",pie2:"Guide prices excluding VAT. The final price is confirmed in writing after measuring.",barra:"Get a quote",
+msg_hola:"Hello, I would like a quote from BOBE. I am sending some photos.",msg_nombre:"Name",msg_tel:"Phone",msg_pueblo:"Town",msg_serv:"Job",msg_m2:"Approx. m²",msg_cuando:"When",msg_det:"Details",msg_calc:"Guide price from the website"},
+de:{ft_eti:"Preis ohne Besichtigung",ft_h2:"Schicken Sie uns ein Foto und wir nennen Ihnen den Preis",ft_p:"Für einen Richtpreis müssen wir nicht zu Ihnen kommen. Das genügt uns:",ft1:"Ein Foto der ganzen Wand oder Decke aus etwas Entfernung.",ft2:"Ungefähre Maße: Länge und Höhe der Wand oder Länge und Breite des Raums.",ft3:"Bei Tür, Fenster, Steckdosen oder Licht ein Nahfoto oder eine kurze Erklärung.",ft_btn:"Fotos per WhatsApp senden",ft_nota:"Wir antworten am selben Tag mit einem Richtpreis. Wenn er passt, kommen wir zum Aufmaß und bestätigen ihn schriftlich.",svg_placa:"PLATTE",svg_lana1:"MINERAL-",svg_lana2:"WOLLE",cta_top:"Angebot anfordern",hero_eti:"Trockenbau · Vega Baja, Elche, Alicante und Murcia",hero_h1:"Trennwände, Decken und Schallschutz im Trockenbau. In wenigen Tagen fertig, ohne Schutt.",hero_lead:"Wir schaffen ein zusätzliches Zimmer im Wohnzimmer, hängen eine Decke mit Beleuchtung ab oder dämmen die Wand, durch die man alles hört. Schicken Sie uns ein Foto per WhatsApp und Sie erhalten noch am selben Tag einen Richtpreis, ohne Besichtigung.",hero_cta1:"Preise ansehen",hero_cta2:"Foto per WhatsApp senden",t1:"Richtpreis per Foto, ohne Besichtigung",t2:"Antwort per WhatsApp am selben Tag",t3:"Trockenbau: kein Schutt, tägliche Reinigung",t4:"Wir sprechen Deutsch, Englisch und Spanisch",corte:"TRENNWAND 98/600 · 2 PLATTEN 15 mm · MW 40 mm · ~42 dB",
+calc_eti:"Preisrechner",calc_h2:"Was würde es kosten?",calc_p:"Wählen Sie die Arbeit und die ungefähren Quadratmeter. Sie erhalten sofort einen Richtpreis; den endgültigen Preis schriftlich nach unserem Besuch.",c_serv:"Arbeit",c_m2:"Ungefähre Quadratmeter",c_ayuda:"Wand: Länge × Höhe. Decke: Länge × Breite des Raums.",c_res:"Richtpreis",c_nota:"Zzgl. MwSt. Material, Montage und Reinigung inklusive.",c_min:"Mindestauftrag",c_btn:"Kostenlosen Besuch mit diesem Richtpreis anfragen",
+p_eti:"Preise",p_h2:"Was wir machen und ab welchem Preis",p_p:"Markenmaterial, Montage und Reinigung inklusive. Keine Überraschungen auf der Rechnung.",desde:"ab",m2u:"€/m² zzgl. MwSt.",pk_eti:"Am häufigsten angefragt",pk_h3:"Ein zusätzliches Zimmer im Wohnzimmer",pk_p:"Trennwand bis 10 m² mit Türöffnung, Mineralwolle und streichfertig verspachtelt. In 2 Tagen montiert.",pk_btn:"Das möchte ich",p_aviso:"Richtpreise zzgl. MwSt. für Arbeiten in unserer Region. Mindestauftrag: 350 €. Mit Ihren Fotos präzisieren wir den Preis; den Endpreis erhalten Sie schriftlich nach dem Aufmaß.",pedir:"Preis anfragen",
+m_eti:"So arbeiten wir",m_h2:"Von Ihrer Nachricht bis zur fertigen Arbeit",m1_t:"Heute",m1_h:"Sie schicken uns Fotos",m1_p:"Per WhatsApp: 2 oder 3 Fotos und ungefähre Maße.",m2_t:"Am selben Tag",m2_h:"Richtpreis",m2_p:"Wir sagen Ihnen, was es kosten würde und welches System wir empfehlen, ohne Besichtigung.",m3_t:"Wenn es passt",m3_h:"Aufmaß und Festpreis",m3_p:"Wir kommen, messen und geben Ihnen den Endpreis schriftlich, mit Starttermin.",m4_t:"2–5 Tage",m4_h:"Saubere Montage und Übergabe",m4_p:"Trockenbau, tägliche Reinigung und Fotos vom Fortschritt per WhatsApp.",
+f_eti:"Preis per WhatsApp",f_h2:"Erzählen Sie uns von Ihrem Projekt",f_p:"Dauert eine Minute. Beim Absenden öffnet sich WhatsApp mit Ihrer Nachricht: Fügen Sie 2 oder 3 Fotos hinzu und wir antworten mit einem Richtpreis.",f_tel:"Oder rufen Sie uns direkt an oder schreiben Sie uns:",f_nombre:"Name",f_telefono:"Telefon",f_pueblo:"Ort der Arbeit",f_serv:"Was brauchen Sie?",f_m2:"Ungefähre m² (falls bekannt)",f_cuando:"Wann?",f_msg:"Erzählen Sie uns etwas mehr",f_msg_ph:"Z. B.: Ich möchte das Wohnzimmer teilen, um ein Schlafzimmer zu bekommen; die Decke ist 2,60 m hoch.",f_priv:"Ich bin einverstanden, dass BOBE Construcciones diese Daten nur verwendet, um mich zu diesem Angebot zu kontaktieren.",f_btn:"Senden und Fotos schicken",f_ok:"Ihre Nachricht ist fertig. Tippen Sie auf die Schaltfläche und fügen Sie im WhatsApp-Chat 2 oder 3 Fotos der Wand oder Decke hinzu:",f_wa:"Per WhatsApp senden",f_copiar:"Nachricht kopieren",f_copiado:"Kopiert",elige:"Bitte wählen",otro:"Anderer Ort",
+e_nombre:"Bitte geben Sie Ihren Namen ein.",e_tel:"Bitte geben Sie eine Telefonnummer mit mindestens 9 Ziffern ein.",e_pueblo:"Bitte wählen Sie den Ort der Arbeit.",e_serv:"Bitte wählen Sie, was Sie brauchen.",e_priv:"Bitte setzen Sie das Häkchen, damit wir Sie kontaktieren können.",
+z_eti:"Wo wir arbeiten",z_h2:"Trockenbau in der Vega Baja, Elche, Alicante und Murcia",z_p:"Wir sind in der Vega Baja ansässig und täglich in der Region und an der Küste unterwegs. Ist Ihr Ort nicht aufgeführt? Fragen Sie uns.",d_eti:"Häufige Fragen",d_h2:"Was uns oft gefragt wird",pie1:"Trockenbau, abgehängte Decken und Schallschutz · Vega Baja (Alicante)",pie2:"Richtpreise zzgl. MwSt. Der Endpreis wird nach dem Aufmaß schriftlich bestätigt.",barra:"Angebot",
+msg_hola:"Hallo, ich möchte ein Angebot von BOBE. Ich schicke Ihnen ein paar Fotos.",msg_nombre:"Name",msg_tel:"Telefon",msg_pueblo:"Ort",msg_serv:"Arbeit",msg_m2:"Ca. m²",msg_cuando:"Wann",msg_det:"Details",msg_calc:"Richtpreis von der Website"}
+};
+
+const SERV = {
+  es:{tabique:["Tabique de pladur","Para dividir una habitación o hacer un dormitorio.","1 PLACA POR CARA · LM 40 mm"],techo:["Falso techo continuo","Para bajar un techo, tapar instalaciones o poner focos.","PLACA 13 mm · PERFIL T-47"],registrable:["Techo registrable","Para oficinas y locales: placas que se levantan para acceder a las instalaciones.","PLACA 60×60 · PERFIL T-24"],trasdosado:["Trasdosado con aislamiento","Para una pared fría o con humedad de condensación.","PLACA 15 mm · LM 40 mm"],insonorizacion:["Insonorización","Para la pared que comparte ruido con el vecino o la calle.","DOBLE PLACA · LM 60 mm · BANDA ACÚSTICA"],habitacion:["Gana una habitación (paquete)"],otro:["Otro trabajo"]},
+  en:{tabique:["Drywall partition","To split a room or create a bedroom.","1 BOARD EACH SIDE · MW 40 mm"],techo:["Continuous false ceiling","To lower a ceiling, hide services or add spotlights.","BOARD 13 mm · T-47 PROFILE"],registrable:["Suspended ceiling with access tiles","For offices and shops: tiles lift out to reach services.","TILE 60×60 · T-24 GRID"],trasdosado:["Insulated wall lining","For a cold wall or one with condensation.","BOARD 15 mm · MW 40 mm"],insonorizacion:["Soundproofing","For the wall that lets in noise from neighbours or the street.","DOUBLE BOARD · MW 60 mm · ACOUSTIC STRIP"],habitacion:["Add a room (package)"],otro:["Other job"]},
+  de:{tabique:["Trockenbau-Trennwand","Um einen Raum zu teilen oder ein Schlafzimmer zu schaffen.","1 PLATTE JE SEITE · MW 40 mm"],techo:["Abgehängte Decke","Um eine Decke abzuhängen, Leitungen zu verdecken oder Spots einzubauen.","PLATTE 13 mm · PROFIL T-47"],registrable:["Rasterdecke mit Revisionsplatten","Für Büros und Läden: Platten lassen sich für Leitungen herausnehmen.","PLATTE 60×60 · RASTER T-24"],trasdosado:["Vorsatzschale mit Dämmung","Für eine kalte Wand oder eine Wand mit Kondensfeuchte.","PLATTE 15 mm · MW 40 mm"],insonorizacion:["Schallschutz","Für die Wand, durch die man Nachbarn oder Straße hört.","DOPPELPLATTE · MW 60 mm · AKUSTIKBAND"],habitacion:["Zusätzliches Zimmer (Paket)"],otro:["Andere Arbeit"]}
+};
+const CUANDO = {es:["Lo antes posible","Este mes","En 1–3 meses","Solo estoy mirando precios"],en:["As soon as possible","This month","In 1–3 months","Just comparing prices"],de:["So bald wie möglich","Diesen Monat","In 1–3 Monaten","Ich vergleiche nur Preise"]};
+const FAQ = {
+ es:[["¿Hace falta que vengáis a verlo?","Para darte un precio orientativo, no: con 2 o 3 fotos y las medidas aproximadas por WhatsApp nos basta. Antes de empezar sí vamos a medir, para cerrarte el precio por escrito."],["¿Cuánto tarda un tabique?","Un tabique normal de una habitación se monta en 1 o 2 días, y uno o dos más para juntas listas para pintar. Te damos la fecha exacta en el presupuesto."],["¿Se ensucia mucho la casa?","Muy poco. El pladur es obra seca: no hay ladrillo, cemento ni escombro. Cortamos en una zona protegida y recogemos cada día."],["¿El pladur aguanta peso?","Sí. Una tele, una estantería o los muebles de cocina se cuelgan con tacos específicos, y si nos lo dices antes, ponemos refuerzos dentro del tabique donde los vayas a colgar."],["¿Aísla del ruido?","Un tabique con lana mineral aísla bastante mejor que uno hueco. Si el ruido es el problema principal, lo indicado es la insonorización con doble placa y banda acústica."],["¿Los precios llevan IVA?","No. Los precios de la web son orientativos y sin IVA. En el presupuesto escrito te ponemos el total con IVA."],["¿Trabajáis para empresas de reformas y constructoras?","Sí. Hacemos la parte de pladur como subcontrata, con plazos cerrados. Escríbenos y te contamos condiciones."]],
+ en:[["Do you need to come and see it?","Not for a guide price: 2 or 3 photos and rough measurements on WhatsApp are enough. Before we start we do come to measure, so we can confirm the price in writing."],["How long does a partition take?","A standard room partition is built in 1–2 days, plus one or two more for joints ready to paint. You get the exact date in the quote."],["Does it make a mess?","Very little. Drywall is a dry build: no bricks, cement or rubble. We cut in a protected area and clean up every day."],["Can drywall hold weight?","Yes. A TV, shelves or kitchen units hang on special fixings, and if you tell us beforehand we add reinforcement inside the wall where you will hang them."],["Does it block noise?","A partition with mineral wool insulates much better than a hollow one. If noise is the main problem, choose soundproofing with double boards and acoustic strip."],["Do prices include VAT?","No. Website prices are guide prices excluding VAT. The written quote shows the total with VAT."],["Do you work for builders and renovation companies?","Yes. We do the drywall as a subcontractor, with fixed deadlines. Message us for terms."]],
+ de:[["Müssen Sie vorbeikommen?","Für einen Richtpreis nicht: 2 oder 3 Fotos und ungefähre Maße per WhatsApp genügen. Vor Arbeitsbeginn kommen wir zum Aufmaß und bestätigen den Preis schriftlich."],["Wie lange dauert eine Trennwand?","Eine normale Zimmerwand steht in 1–2 Tagen, dazu ein bis zwei Tage für streichfertiges Verspachteln. Das genaue Datum steht im Angebot."],["Macht das viel Schmutz?","Sehr wenig. Trockenbau bedeutet: keine Ziegel, kein Zement, kein Schutt. Wir schneiden in einem abgedeckten Bereich und räumen täglich auf."],["Hält Trockenbau Gewicht aus?","Ja. Fernseher, Regale oder Küchenschränke werden mit speziellen Dübeln befestigt. Wenn Sie es uns vorher sagen, bauen wir an diesen Stellen Verstärkungen in die Wand ein."],["Dämmt das Schall?","Eine Wand mit Mineralwolle dämmt deutlich besser als eine hohle. Ist Lärm das Hauptproblem, ist Schallschutz mit Doppelplatte und Akustikband die richtige Wahl."],["Sind die Preise inklusive MwSt.?","Nein. Die Preise auf der Website sind Richtpreise ohne MwSt. Im schriftlichen Angebot steht der Gesamtbetrag mit MwSt."],["Arbeiten Sie für Bau- und Renovierungsfirmen?","Ja. Wir übernehmen den Trockenbau als Subunternehmer mit festen Terminen. Schreiben Sie uns für Konditionen."]]
+};
+
+let lang = "es";
+const $ = s => document.querySelector(s);
+const t = k => (T[lang] && T[lang][k]) || T.es[k] || "";
+const eur = n => (lang === "es" || lang === "de") ? Math.round(n).toLocaleString("es-ES") + " €" : "€" + Math.round(n).toLocaleString("en-GB");
+const r10 = n => Math.round(n / 10) * 10;
+const waUrl = txt => "https://wa.me/" + WHATSAPP + (txt ? "?text=" + encodeURIComponent(txt) : "");
+
+function opciones(sel, items, conVacia){
+  const actual = sel.value;
+  sel.innerHTML = (conVacia ? `<option value="">${t("elige")}</option>` : "") + items.map(([v, txt]) => `<option value="${v}">${txt}</option>`).join("");
+  if ([...sel.options].some(o => o.value === actual)) sel.value = actual;
+}
+
+function pintar(){
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-t]").forEach(el => { const v = t(el.dataset.t); if (v) el.textContent = v; });
+  document.querySelectorAll("[data-tp]").forEach(el => { el.placeholder = t(el.dataset.tp); });
+  document.querySelectorAll("[data-lang]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+  const S = SERV[lang];
+  opciones($("#f-serv"), [...Object.keys(PRECIOS), "habitacion", "otro"].map(k => [k, S[k][0]]), true);
+  opciones($("#f-cuando"), CUANDO[lang].map(x => [x, x]), false);
+  opciones($("#f-pueblo"), [...PUEBLOS.map(p => [p, p]), ["otro", t("otro")]], true);
+  $("#lista-precios").innerHTML = Object.keys(PRECIOS).map(k => `
+    <article class="serv">
+      <h3>${S[k][0]}</h3>
+      <p class="desde num">${t("desde")} ${PRECIOS[k]} <small>${t("m2u")}</small></p>
+      <p>${S[k][1]}</p>
+      <span class="dato">${S[k][2]}</span>
+      <button type="button" class="btn btn-line" data-ir="presupuesto" data-servicio="${k}" style="justify-self:start;min-height:44px">${t("pedir")}</button>
+    </article>`).join("");
+  $("#pk-precio").textContent = eur(PRECIO_HABITACION);
+  $("#pueblos").innerHTML = PUEBLOS.map(p => `<li>${p}</li>`).join("");
+  $("#faq").innerHTML = FAQ[lang].map(([q, a]) => `<details><summary>${q}</summary><p>${a}</p></details>`).join("");
+  $("#tel-visible").textContent = TELEFONO_VISIBLE;
+  document.querySelectorAll("[data-wa]").forEach(a => a.href = waUrl(t("msg_hola")));
+}
+
+function ir(id){ const el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" }); }
+
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-ir]");
+  if (b){
+    e.preventDefault();
+    if (b.dataset.servicio) $("#f-serv").value = b.dataset.servicio;
+    ir(b.dataset.ir);
+  }
+  const l = e.target.closest("[data-lang]");
+  if (l){ lang = l.dataset.lang; history.replaceState(null, "", lang === "es" ? location.pathname + location.search : "#" + lang); pintar(); }
+});
+
+$("#form").addEventListener("submit", e => {
+  e.preventDefault();
+  const f = e.target, err = $("#f-err");
+  const tel = f.telefono.value.replace(/[^\d+]/g, "");
+  const fallo = !f.nombre.value.trim() ? "e_nombre" : tel.replace(/\D/g, "").length < 9 ? "e_tel" : !f.pueblo.value ? "e_pueblo" : !f.servicio.value ? "e_serv" : !f.privacidad.checked ? "e_priv" : "";
+  if (fallo){ err.textContent = t(fallo); err.hidden = false; return; }
+  err.hidden = true;
+  const S = SERV[lang];
+  const lineas = [
+    t("msg_hola"),
+    `${t("msg_nombre")}: ${f.nombre.value.trim()}`,
+    `${t("msg_tel")}: ${f.telefono.value.trim()}`,
+    `${t("msg_pueblo")}: ${f.pueblo.value === "otro" ? t("otro") : f.pueblo.value}`,
+    `${t("msg_serv")}: ${S[f.servicio.value][0]}`,
+    f.m2.value.trim() ? `${t("msg_m2")}: ${f.m2.value.trim()}` : "",
+    `${t("msg_cuando")}: ${f.cuando.value}`,
+    f.mensaje.value.trim() ? `${t("msg_det")}: ${f.mensaje.value.trim()}` : ""
+  ].filter(Boolean).join("\n");
+  $("#listo-txt").textContent = lineas;
+  $("#listo-wa").href = waUrl(lineas);
+  $("#listo").hidden = false;
+  $("#listo").scrollIntoView({ behavior: "smooth", block: "nearest" });
+});
+
+$("#listo-copiar").addEventListener("click", async () => {
+  const b = $("#listo-copiar");
+  try { await navigator.clipboard.writeText($("#listo-txt").textContent); b.textContent = t("f_copiado"); }
+  catch (x) { const r = document.createRange(); r.selectNodeContents($("#listo-txt")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+});
+
+function desdeHash(){ const h = location.hash.slice(1); if (T[h]) { lang = h; } else if (!h) { lang = "es"; } pintar(); }
+window.addEventListener("hashchange", desdeHash);
+desdeHash();
+</script>
+</body>
+</html>
