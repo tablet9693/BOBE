@@ -3,7 +3,7 @@
    info@bobeconstrucciones.es a través de FormSubmit (formsubmit.co). Si el envío falla, se ofrece
    mandarlo por WhatsApp para no perder el contacto. Cada apertura y envío se cuenta en GoatCounter. */
 (function () {
-  var CORREO = "info@bobeconstrucciones.es";
+  var CORREO = "e12438b70aa916fd975dc5d51831f5c2"; // alias de FormSubmit para info@bobeconstrucciones.es (no se ve el correo en el código)
   var WHATSAPP = "34616331574";
   var TXT = {
     es: { titulo: "Te llamamos nosotros", intro: "Déjanos tu nombre y tu teléfono y te llamamos hoy para darte precio. Sin compromiso.",
