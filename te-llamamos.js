@@ -39,7 +39,7 @@
     try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: ruta, title: titulo, event: true }); } catch (e) {}
   };
   // Google Ads: cuando tengas las etiquetas de conversión (AW-XXXX/YYYY), ponlas aquí.
-  var ADS = { formulario: "", whatsapp: "", llamada: "" };
+  var ADS = { formulario: "AW-18580271829/gn7tCKb0hLodENXl4ZtF", whatsapp: "", llamada: "" };
   var ads = function (tipo, evento) {
     try {
       if (typeof window.gtag !== "function") return;
