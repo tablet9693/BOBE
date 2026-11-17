@@ -164,14 +164,14 @@ textarea{min-height:96px;resize:vertical}
 @media (max-width:860px){.pasos{grid-template-columns:1fr 1fr;gap:30px}}@media (max-width:520px){.pasos{grid-template-columns:1fr}}
 
 /* obras */
-.obras{display:grid;grid-template-columns:1.6fr 1fr;grid-template-rows:260px 260px;gap:14px;margin-top:48px}
+.obras{display:grid;grid-template-columns:1.5fr 1fr 1fr;grid-template-rows:260px 260px;gap:14px;margin-top:48px}
 .obras figure{margin:0;position:relative;overflow:hidden;border-radius:var(--r)}
-.obras figure:first-child{grid-row:1/3}
+.obras figure:first-child{grid-row:1/3}.obras figure.alta{grid-column:3;grid-row:1/3}
 .obras img{width:100%;height:100%;object-fit:cover;transition:.5s}.obras figure:hover img{transform:scale(1.04)}
 .obras figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 14px;background:linear-gradient(transparent,rgba(20,24,27,.85));color:#fff;font-size:.86rem}
 .obras figcaption b{display:block;font:800 1.35rem var(--f-d);text-transform:uppercase}
 .obras figure{border-bottom:4px solid var(--accent)}
-@media (max-width:760px){.obras{grid-template-columns:1fr 1fr;grid-template-rows:auto}.obras figure{aspect-ratio:1}.obras figure:first-child{grid-column:1/-1;grid-row:auto;aspect-ratio:4/3}}
+@media (max-width:760px){.obras figure.alta{grid-column:auto;grid-row:auto}.obras{grid-template-columns:1fr 1fr;grid-template-rows:auto}.obras figure{aspect-ratio:1}.obras figure:first-child{grid-column:1/-1;grid-row:auto;aspect-ratio:4/3}}
 
 /* zonas */
 .zonas{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(30px,6vw,80px);align-items:start}
@@ -362,6 +362,7 @@ footer .legal .wrap{display:flex;justify-content:space-between;gap:20px;flex-wra
     <figure><img src="img/trabajo-1.jpg" alt="Vivienda con techos y paredes de pladur en fase de juntas" loading="lazy"><figcaption><b>Vivienda unifamiliar</b>Techos y trasdosados de pladur</figcaption></figure>
     <figure><img src="img/trabajo-3.jpg" alt="Techo de pladur con tabicas" loading="lazy"><figcaption><b>Techo con tabicas</b>Encintado de juntas</figcaption></figure>
     <figure><img src="img/trabajo-2.jpg" alt="Remates de pladur junto a ventana" loading="lazy"><figcaption><b>Remates en huecos</b>Encuentros con carpintería</figcaption></figure>
+    <figure class="alta"><img src="img/trabajo-armario.jpg" alt="Armario empotrado de pladur terminado y pintado" loading="lazy"><figcaption><b>Armario empotrado</b>Pladur terminado y pintado</figcaption></figure>
   </div>
 </div></section>
 
