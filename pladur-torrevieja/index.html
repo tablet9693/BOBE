@@ -2,15 +2,17 @@
 <html lang="es">
 <head>
 <!-- Google tag (Google Ads) -->
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-58X3MPTS"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18580271829"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', { ad_storage: 'denied', analytics_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', wait_for_update: 500 });
+  try { if (localStorage.getItem('bobe_cookies') === 'si') gtag('consent', 'update', { ad_storage: 'granted', analytics_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted' }); } catch (e) {}
   gtag('js', new Date());
   gtag('config', 'AW-18580271829');
   gtag('config', 'G-EE0J923JD2');
 </script>
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-58X3MPTS"></script>
 <meta charset="utf-8">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -22,6 +24,7 @@
 <link rel="canonical" href="https://www.bobeconstrucciones.es/pladur-torrevieja/">
 <link rel="alternate" hreflang="es" href="https://www.bobeconstrucciones.es/pladur-torrevieja/">
 <link rel="alternate" hreflang="en" href="https://www.bobeconstrucciones.es/en/drywall-torrevieja/">
+<link rel="alternate" hreflang="de" href="https://www.bobeconstrucciones.es/de/trockenbau-torrevieja/">
 <link rel="alternate" hreflang="x-default" href="https://www.bobeconstrucciones.es/pladur-torrevieja/">
 <meta property="og:title" content="Pladur en Torrevieja y Orihuela Costa | BOBE Construcciones">
 <meta property="og:description" content="Pladur en Torrevieja, Orihuela Costa y Guardamar: insonorizar apartamentos, tabiques y falsos techos. Visita y presupuesto gratis. English &amp; Deutsch.">
@@ -88,7 +91,7 @@ footer{background:#14181B;color:#F3F3F0;padding:40px 0 110px;margin-top:40px}foo
 <p class="dato">BOBE Construcciones · 13 de noviembre de 2026</p>
 </div></div>
 <article class="lect" style="padding-top:24px">
-<p class="intro">En <strong>Torrevieja</strong> y la costa hacemos sobre todo dos trabajos: <strong>insonorizar apartamentos</strong> donde se oye todo, y <strong>reformas rápidas con pladur</strong> para sacar una habitación más o renovar techos. Visita y presupuesto gratis. <em>We speak English · Wir sprechen Deutsch. <a href="/en/drywall-torrevieja/">Read this page in English</a>.</em></p>
+<p class="intro">En <strong>Torrevieja</strong> y la costa hacemos sobre todo dos trabajos: <strong>insonorizar apartamentos</strong> donde se oye todo, y <strong>reformas rápidas con pladur</strong> para sacar una habitación más o renovar techos. Visita y presupuesto gratis. <em>We speak English · Wir sprechen Deutsch. <a href="/en/drywall-torrevieja/">Read this page in English</a> · <a href="/de/trockenbau-torrevieja/">Diese Seite auf Deutsch</a>.</em></p>
 
 <h2>Apartamentos en la costa: el problema del ruido</h2>
 <p>Muchos edificios de Torrevieja, La Mata u Orihuela Costa se construyeron rápido y con tabiques finos. Si oyes la tele, las conversaciones o la terraza del vecino, la solución más habitual es un <strong>trasdosado acústico</strong>: una estructura separada de tu pared, con lana mineral dentro y doble placa. No hace falta tirar nada ni tocar la vivienda del vecino. <a href="/blog/insonorizar-pared-vecino-pladur/">Cómo se hace</a>.</p>
@@ -144,5 +147,6 @@ document.addEventListener("click", function(e){
 });
 </script>
 <script src="/te-llamamos.js" defer></script>
+<script src="/cookies.js" defer></script>
 </body>
 </html>

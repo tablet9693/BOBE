@@ -2,15 +2,17 @@
 <html lang="es">
 <head>
 <!-- Google tag (Google Ads) -->
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-58X3MPTS"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18580271829"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', { ad_storage: 'denied', analytics_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', wait_for_update: 500 });
+  try { if (localStorage.getItem('bobe_cookies') === 'si') gtag('consent', 'update', { ad_storage: 'granted', analytics_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted' }); } catch (e) {}
   gtag('js', new Date());
   gtag('config', 'AW-18580271829');
   gtag('config', 'G-EE0J923JD2');
 </script>
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-58X3MPTS"></script>
 <meta charset="utf-8">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -33,7 +35,7 @@ p,li{color:#2A3136}.dato{font:500 .85rem ui-monospace,Menlo,monospace;color:var(
 <main>
 <p><a href="/">← BOBE Construcciones</a></p>
 <h1>Política de privacidad</h1>
-<p class="dato">Última actualización: 12 de noviembre de 2026</p>
+<p class="dato">Última actualización: 17 de noviembre de 2026</p>
 
 <h2>Quién trata tus datos</h2>
 <p>BOBE Construcciones, empresa de instalación de pladur en la Vega Baja, Elche, Alicante y Murcia. Contacto: <a href="mailto:info@bobeconstrucciones.es">info@bobeconstrucciones.es</a> · +34 616 33 15 74.</p>
@@ -51,13 +53,14 @@ p,li{color:#2A3136}.dato{font:500 .85rem ui-monospace,Menlo,monospace;color:var(
 <p>Si no llegamos a hacer la obra, los borramos en un máximo de 12 meses. Si la hacemos, los conservamos el tiempo que obliga la ley para facturas y garantías.</p>
 
 <h2>Con quién se comparten</h2>
-<p>No cedemos tus datos a terceros. Para funcionar usamos servicios que los tratan por nuestra cuenta: Meta (formularios de Facebook e Instagram y WhatsApp), FormSubmit (envío del formulario «Te llamamos» a nuestro correo) y Render (alojamiento de la web). Si tu obra la ejecuta un instalador colaborador, solo le pasamos lo necesario para hacerla (dirección y teléfono de contacto).</p>
+<p>No cedemos tus datos a terceros. Para funcionar usamos servicios que los tratan por nuestra cuenta: Meta (formularios de Facebook e Instagram y WhatsApp), FormSubmit (envío de los formularios de la web a nuestro correo), Render (alojamiento de la web) y Google (Google Ads y Google Analytics, solo si aceptas las cookies). Si tu obra la ejecuta un instalador colaborador, solo le pasamos lo necesario para hacerla (dirección y teléfono de contacto).</p>
 
 <h2>Estadísticas de la web</h2>
-<p>Usamos GoatCounter para contar visitas de forma agregada. No usa cookies ni guarda datos personales.</p>
+<p>Usamos GoatCounter para contar visitas de forma agregada, sin cookies ni datos personales. Si aceptas las cookies, también usamos Google Analytics y Google Ads para medir la web y los anuncios. Más detalles en la <a href="/cookies/">política de cookies</a>.</p>
 
 <h2>Tus derechos</h2>
 <p>Puedes pedir ver, corregir o borrar tus datos, o retirar tu consentimiento, escribiendo a <a href="mailto:info@bobeconstrucciones.es">info@bobeconstrucciones.es</a>. Si crees que no hemos atendido bien tu petición, puedes reclamar ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es">aepd.es</a>).</p>
 </main>
+<script src="/cookies.js" defer></script>
 </body>
 </html>
