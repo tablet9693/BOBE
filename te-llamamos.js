@@ -38,6 +38,22 @@
   var contar = function (ruta, titulo) {
     try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: ruta, title: titulo, event: true }); } catch (e) {}
   };
+  // Google Ads: cuando tengas las etiquetas de conversión (AW-XXXX/YYYY), ponlas aquí.
+  var ADS = { formulario: "", whatsapp: "", llamada: "" };
+  var ads = function (tipo, evento) {
+    try {
+      if (typeof window.gtag !== "function") return;
+      window.gtag("event", evento, { metodo: tipo });
+      if (ADS[tipo]) window.gtag("event", "conversion", { send_to: ADS[tipo] });
+    } catch (e) {}
+  };
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest("a[href]");
+    if (!a) return;
+    var h = a.getAttribute("href") || "";
+    if (/wa\.me\/|api\.whatsapp\.com/.test(h)) ads("whatsapp", "contacto_whatsapp");
+    else if (/^tel:/.test(h)) ads("llamada", "contacto_llamada");
+  }, true);
   var pagina = function () { return location.pathname.replace(/\/$/, "") || "/"; };
 
   var css = document.createElement("style");
@@ -119,6 +135,7 @@
       .then(function (r) { return r.json().then(function (j) { if (!r.ok || String(j.success) !== "true") throw new Error(j.message || "error"); }); })
       .then(function () {
         contar("llamame-enviado/" + desde + pagina(), "Te llamamos · enviado · " + desde);
+        ads("formulario", "generate_lead");
         terminar('<p class="ll-ok">' + t.ok + "</p>");
       })
       .catch(function () {
