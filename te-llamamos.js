@@ -39,7 +39,7 @@
     try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: ruta, title: titulo, event: true }); } catch (e) {}
   };
   // Google Ads: cuando tengas las etiquetas de conversión (AW-XXXX/YYYY), ponlas aquí.
-  var ADS = { formulario: "AW-18580271829/gn7tCKb0hLodENXl4ZtF", whatsapp: "AW-18580271829/sX4sCOzrjrodENXl4ZtF", llamada: "" };
+  var ADS = { formulario: "AW-18580271829/gn7tCKb0hLodENXl4ZtF", whatsapp: "AW-18580271829/sX4sCOzrjrodENXl4ZtF", llamada: "AW-18580271829/NZEzCNinhrsdENXl4ZtF" };
   var ads = function (tipo, evento) {
     try { if (typeof window.fbq === "function") window.fbq("track", tipo === "formulario" ? "Lead" : "Contact", { metodo: tipo }); } catch (e) {}
     try {
