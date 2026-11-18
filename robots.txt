@@ -27,6 +27,7 @@ User-agent: Google-Extended
 Allow: /
 
 User-agent: *
+Disallow: /social/
 Allow: /
 
 Sitemap: https://www.bobeconstrucciones.es/sitemap.xml
