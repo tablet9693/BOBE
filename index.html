@@ -493,6 +493,7 @@ footer .legal .wrap{display:flex;justify-content:space-between;gap:20px;flex-wra
         .then(function(){
           msg.className = "f-msg ok"; msg.textContent = tipo === "empresa" ? "¡Recibido! Te llamamos en 24 horas laborables para estudiar la obra." : "¡Recibido! Te llamamos hoy o, como muy tarde, el siguiente día laborable.";
           f.reset(); contar("formulario-" + tipo + "/enviado", "Formulario " + tipo + " enviado");
+          try { if (window.fbq) fbq("track", "Lead", { metodo: "formulario_" + tipo }); } catch(e){}
           try { gtag("event", "generate_lead", { metodo: "formulario_" + tipo }); gtag("event", "conversion", { send_to: CONVERSION }); } catch(e){}
         })
         .catch(function(){ msg.className = "f-msg err"; msg.innerHTML = 'No se ha podido enviar. Llámanos al <a href="tel:+34616331574">616 33 15 74</a> o escríbenos a <a href="mailto:info@bobeconstrucciones.es">info@bobeconstrucciones.es</a>.'; contar("formulario-" + tipo + "/fallo", "Formulario " + tipo + " fallo"); })
