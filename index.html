@@ -486,6 +486,7 @@ footer .legal .wrap{display:flex;justify-content:space-between;gap:20px;flex-wra
       Array.prototype.forEach.call(f.elements, function(x){ if (x.name && x.name !== "_honey" && x.name !== "privacidad" && x.value.trim()) datos[x.labels && x.labels[0] ? x.labels[0].textContent.replace(" *","") : x.name] = x.value.trim(); });
       datos._subject = tipo === "empresa" ? "🏗️ Empresa: " + f.empresa.value.trim() + " · " + f.localidad.value.trim() : "📋 Presupuesto: " + f.nombre.value.trim() + " · " + f.servicio.value;
       datos._template = "table"; datos._captcha = "false"; datos.Origen = "Web · " + tipo;
+      if (tipo === "empresa" && f.email && f.email.value.trim()) { datos._replyto = f.email.value.trim(); datos._autoresponse = "Gracias por contactar con BOBE Construcciones. Hemos recibido la solicitud de su obra y le llamaremos en 24 horas laborables. Si tiene planos o mediciones, puede responder a este correo adjuntándolos y le preparamos el presupuesto por partidas. Un saludo, Antonio · BOBE Construcciones · 616 33 15 74 · bobeconstrucciones.es"; }
       b.disabled = true; msg.hidden = false; msg.className = "f-msg"; msg.textContent = "Enviando…";
       fetch("https://formsubmit.co/ajax/" + CORREO, { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify(datos) })
         .then(function(r){ return r.json().then(function(j){ if (!r.ok || String(j.success) !== "true") throw new Error(); }); })
